@@ -2,7 +2,7 @@
   <div :class="[task.reminder ? 'reminder' : '', 'task']" @dblclick="$emit('set-reminder')">
     <div class="task__text">
       <p>{{ task.text }}</p>
-      <i class="fas fa-times" @click="$emit('delete-task')"></i>
+      <i class="fas fa-times delete" @click="$emit('delete-task')"></i>
     </div>
     <p class="task__text">{{ task.time }}</p>
   </div>
@@ -17,7 +17,7 @@
   }
 </script>
 <style scope>
-  .fas:hover {
+  .delete:hover {
     color: red;
   }
   .task {
