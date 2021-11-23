@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <Header title="Task Tracker" />
-    <Tasks :tasks="tasks" @delete-task="deleteTask" @set-reminder="setReminder" />
+    <main>
+      <Tasks :tasks="tasks" @delete-task="deleteTask" @set-reminder="setReminder" />
+    </main>
   </div>
 </template>
 
