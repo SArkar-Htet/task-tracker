@@ -22,11 +22,12 @@ export default {
   },
   methods: {
     deleteTask(id) {
-      this.tasks = this.tasks.filter((task) => (task.id !== id));
+      if (confirm("Are you sure to delete")) {
+        this.tasks = this.tasks.filter((task) => (task.id !== id));
+      }
     },
     setReminder(id) {
       this.tasks = this.tasks.map(task => (task.id === id ? {...task, reminder: !task.reminder } : {...task} ));
-      console.log(this.tasks);
     }
   },
   created() {
