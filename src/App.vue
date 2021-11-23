@@ -2,7 +2,7 @@
   <div class="container">
     <Header title="Task Tracker" />
     <main>
-      <AddTask />
+      <AddTask @add-task="addTask" />
       <Tasks :tasks="tasks" @delete-task="deleteTask" @set-reminder="setReminder" />
     </main>
   </div>
@@ -26,6 +26,10 @@ export default {
     }
   },
   methods: {
+    addTask(task) {
+      this.tasks = [...this.tasks, task];
+      console.table(this.tasks)
+    },
     deleteTask(id) {
       if (confirm("Are you sure to delete")) {
         this.tasks = this.tasks.filter((task) => (task.id !== id));
