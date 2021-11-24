@@ -109,4 +109,7 @@ export default {
     display: block;
     width: 100%;
   }
+  .fas {
+    cursor: pointer;
+  }
 </style>
