@@ -17,6 +17,24 @@
       "text": "Food Shopping",
       "time": "March 5th at 11:00am",
       "reminder": false
+    },
+    {
+      "text": "WorkOut",
+      "time": "Nov 23rd at 4:30pm",
+      "reminder": false,
+      "id": 4
+    },
+    {
+      "text": "Time to my gf",
+      "time": "Nov 25th at 7:30pm",
+      "reminder": true,
+      "id": 5
+    },
+    {
+      "text": "Learn Laravel",
+      "time": "Nov 25th at 10:30pm",
+      "reminder": false,
+      "id": 6
     }
   ]
 }

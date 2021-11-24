@@ -24,11 +24,6 @@
         return this.showToggle ? "<i class='fas fa-times'></i>" : "Add Task";
       }
     },
-    methods: {
-      toggleAddTask() {
-        console.log("hello");
-      }
-    }
   }
 </script>
 

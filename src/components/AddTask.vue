@@ -36,7 +36,6 @@
     },
     methods: {
       onSubmit() {
-        console.log(this.text);
         if (!this.text) {
           alert("Please fill task field");
           return;
@@ -46,10 +45,7 @@
           return;
         }
 
-        const id = Math.floor(Math.random() * 100000);
-
         const newTask = {
-          id,
           text: this.text,
           time: this.time,
           reminder: this.reminder,
