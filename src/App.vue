@@ -40,29 +40,19 @@ export default {
     },
     setReminder(id) {
       this.tasks = this.tasks.map(task => (task.id === id ? {...task, reminder: !task.reminder } : {...task} ));
+    },
+    async fetchTasks() {
+      try {
+        const res = await fetch("http://localhost:3000/tasks");
+        const data = await res.json();
+        return data;
+      } catch (error) {
+        console.log(error);
+      }
     }
   },
-  created() {
-    this.tasks = [
-      {
-        id: 1,
-        text: "Doctor's Appointment",
-        time: "March 1st at 2:30pm",
-        reminder: true,
-      },
-      {
-        id: 2,
-        text: "Meeting at school",
-        time: "March 3rd at 1:30pm",
-        reminder: true,
-      },
-      {
-        id: 3,
-        text: "Food Shopping",
-        time: "March 5th at 11:00am",
-        reminder: false,
-      },
-    ]
+  async created() {
+    this.tasks = await this.fetchTasks();
   }
 }
 </script>
